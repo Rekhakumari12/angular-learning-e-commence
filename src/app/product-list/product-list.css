@@ -1,0 +1,126 @@
+:host {
+  display: block;
+}
+
+.product-list-container {
+  background: var(--bg-color, #121212);
+  padding: 2.2rem 1.3rem 2.8rem 1.3rem;
+  border-radius: 11px;
+  box-shadow: var(--shadow, 0 2px 8px rgba(0,0,0,0.44));
+  max-width: 480px;
+  margin: 2.5rem auto;
+  color: var(--text-color, #e1e1e1);
+}
+
+/* Header */
+h2 {
+  color: var(--accent, #00bcd4);
+  text-align: center;
+  margin-bottom: 1.7rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Add Product Link */
+a[routerLink="/add-product"] {
+  display: block;
+  margin: 0 auto 1.9rem auto;
+  max-width: fit-content;
+  color: var(--accent, #00bcd4);
+  background: rgba(0,188,212,0.09);
+  border-radius: 6px;
+  padding: 0.59rem 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.09rem;
+  box-shadow: 0 1px 7px rgba(0,188,212,0.10);
+  transition: background .18s, color .14s;
+  letter-spacing: 0.5px;
+}
+a[routerLink="/add-product"]:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* Product List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: var(--card-bg, #23272a);
+  border-radius: 8px;
+  margin-bottom: 1.09rem;
+  padding: 1.12rem 1.13rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.21);
+  color: var(--text-color, #e1e1e1);
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s, transform 0.12s;
+  border-left: 4px solid transparent;
+}
+li:hover, li:focus {
+  background: #28303A;
+  border-left: 4px solid var(--accent, #00bcd4);
+  transform: scale(1.025);
+}
+
+li:last-child {
+  margin-bottom: 0.7rem;
+}
+
+/* Selected Product Section */
+div[ngIf] {
+  margin-top: 2.2rem;
+  background: #222831;
+  border-radius: 7px;
+  padding: 1.3rem 1rem;
+  color: var(--accent, #00bcd4);
+  box-shadow: 0 2px 13px rgba(0,188,212,0.09);
+  font-size: 1.13rem;
+  text-align: center;
+}
+
+div[ngIf] h3 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.4px;
+}
+
+.add-to-cart-btn {
+  background: var(--accent, #00bcd4);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.48rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.98rem;
+  margin-left: 1.1rem;
+  transition: background 0.18s, transform 0.14s;
+}
+
+.add-to-cart-btn:hover {
+  background: #0097a7;
+  transform: scale(1.08);
+}
+
+.cart-count a[routerLink] {
+  display: block;
+  margin: 1.3rem auto 0 auto;
+  text-align: center;
+  color: var(--accent, #00bcd4);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 4px 0;
+  transition: color 0.15s, border-bottom 0.15s;
+  border-bottom: 1px dotted var(--accent, #00bcd4);
+}

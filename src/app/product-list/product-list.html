@@ -1,0 +1,14 @@
+<div class="product-list-container">
+  <h2>Product List</h2>
+  <a routerLink="/add-product">+ Add Product</a>
+  <ul>
+    <li *ngFor="let item of products" (click)="onProductSelected(item)">
+      {{ item.name }} — ₹{{ item.price }}
+      <button class="add-to-cart-btn" (click)="addToCart(item)">Add to Cart</button>
+    </li>
+  </ul>
+  <div *ngIf="cartProductCount" class="cart-count">
+    <h3>Cart item count: {{ cartProductCount }}</h3>
+    <a routerLink="/cart">Go to cart</a>
+  </div>
+</div>

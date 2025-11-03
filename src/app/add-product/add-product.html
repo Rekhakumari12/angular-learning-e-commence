@@ -1,0 +1,39 @@
+<div class="add-product-container">
+  <h2>Add Product</h2>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="product-form">
+    <div>
+      <input
+        name="name"
+        placeholder="Enter product name"
+        [(ngModel)]="newProduct.name"
+        required
+        type="text"
+        minlength="3"
+      />
+    </div>
+
+    <div
+      *ngIf="f.controls['name'].invalid && (f.controls['name'].dirty || f.controls['name'].touched)"
+    >
+      <div *ngIf="f.controls['name'].errors?.['required']" class="error-message">
+        Product name is required!
+      </div>
+      <div *ngIf="f.controls['name'].errors?.['minlength']" class="error-message">
+        Product name must be at least 3 characters!
+      </div>
+    </div>
+
+    <div>
+      <input
+        name="price"
+        placeholder="Enter price"
+        [(ngModel)]="newProduct.price"
+        required
+        type="number"
+      />
+    </div>
+    <button type="submit" [disabled]="f.invalid" class="add-btn">Add Product</button>
+  </form>
+  <a routerLink="/">Back to List</a>
+</div>

@@ -1,0 +1,44 @@
+<div class="checkout-container">
+  <h2>Checkout</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="checkoutForm">
+    <div>
+      <label>Name: </label>
+      <input formControlName="name" placeholder="Your name" />
+      <div *ngIf="checkoutForm.get('name')?.invalid && checkoutForm.get('name')?.touched">
+        <span *ngIf="checkoutForm.get('name')?.errors?.['required']" class="error">Required</span>
+        <span *ngIf="checkoutForm.get('name')?.errors?.['minlength']" class="error"
+          >Min 3 characters</span
+        >
+      </div>
+    </div>
+
+    <div>
+      <label>Address:</label>
+      <input formControlName="address" placeholder="Delivery address" />
+      <div *ngIf="checkoutForm.get('name')?.invalid && checkoutForm.get('name')?.touched">
+        <span *ngIf="checkoutForm.get('address')?.errors?.['required']" class="error">Required</span>
+      </div>
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input formControlName="email" placeholder="Email" />
+      <div *ngIf="checkoutForm.get('email')?.invalid && checkoutForm.get('email')?.touched">
+        <span *ngIf="checkoutForm.get('email')?.errors?.['required']" class="error">Required</span>
+        <span *ngIf="checkoutForm.get('email')?.errors?.['email']" class="error"
+          >Invalid email</span
+        >
+      </div>
+    </div>
+
+    <div>
+      <label>Payment Method:</label>
+      <select formControlName="paymentMethod">
+        <option value="">Select...</option>
+        <option value="card">Credit Card</option>
+        <option value="cod">Cash on delivery</option>
+      </select>
+    </div>
+    <button type="button" [disabled]="checkoutForm.invalid" class="order-btn">Place order</button>
+  </form>
+</div>

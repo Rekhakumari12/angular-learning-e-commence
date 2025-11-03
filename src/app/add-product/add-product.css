@@ -1,0 +1,107 @@
+.add-product-container {
+  background: var(--card-bg, #23272a);
+  padding: 2.3rem 2.1rem 2rem 2.1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.6));
+  max-width: 400px;
+  margin: 2.8rem auto;
+  color: var(--text-color, #e1e1e1);
+}
+
+.add-product-container h2 {
+  margin-bottom: 1.3rem;
+  color: var(--accent, #00bcd4);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.product-form > div {
+  margin-bottom: 1.1rem;
+}
+
+.product-form input[type='text'],
+.product-form input[type='number'] {
+  width: -webkit-fill-available;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #181c20;
+  color: var(--text-color, #e1e1e1);
+  font-size: 1.08rem;
+  box-shadow: 0 0 0 1.5px #181c20 inset;
+  margin-top: 6px;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.product-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent, #00bcd4);
+  background: #23272a;
+}
+
+.product-form .ng-invalid.ng-touched,
+.product-form .ng-invalid.ng-dirty {
+  border: 1px solid #c62828;
+}
+
+.product-form div[ngif] {
+  margin-top: 0.2rem;
+}
+
+.product-form .error-message {
+  color: #ef5350;
+  background: #260009;
+  border-radius: 6px;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.98rem;
+  margin-top: 0.19rem;
+  margin-bottom: 0;
+  box-shadow: none;
+  letter-spacing: 0.5px;
+}
+
+/* Button styles */
+.add-btn {
+  width: 100%;
+  background: var(--accent, #00bcd4);
+  color: #fff;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.06rem;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 7px rgba(0, 188, 212, 0.14);
+  margin-top: 0.6rem;
+  transition: background 0.2s, transform 0.18s;
+}
+.add-btn[disabled],
+.add-btn:disabled {
+  background: #37474f;
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.add-btn:not([disabled]):hover {
+  background: #0097a7;
+  transform: scale(1.03);
+}
+
+/* Back link styles */
+.add-product-container a[routerLink] {
+  display: block;
+  margin: 1.3rem auto 0 auto;
+  text-align: center;
+  color: var(--accent, #00bcd4);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 4px 0;
+  transition: color 0.15s, border-bottom 0.15s;
+  border-bottom: 1px dotted var(--accent, #00bcd4);
+}
+
+.add-product-container a[routerLink]:hover {
+  color: #40e2ff;
+  border-bottom: 1px solid #40e2ff;
+}
