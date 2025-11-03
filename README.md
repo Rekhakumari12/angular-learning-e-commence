@@ -2,6 +2,40 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
 
+Completed
+ Add Product page/component created
+
+ Cart page/component created and linked to product list
+
+ Product List displays all added products with basic details
+
+ Checkout page/component created and accessible from cart
+
+Checkout Page TODO
+ Set up /checkout route and confirm navigation from cart
+
+ Build shipping address form (name, address, email, phone)
+
+ Build payment details form (card number, expiry, CVV)
+
+ Add Angular validation for all form fields (required/format checks)
+
+ Display error messages for invalid inputs
+
+ Show order summary with cart items and total price
+
+ Disable “Place Order” if form is invalid
+
+ Create Angular service to hold cart/checkout data in memory
+
+ Implement “Place Order” action to update in-memory order & reset cart/form
+
+ Show confirmation page/component after successful checkout
+
+ Simulate error handling for failed checkout (mock error, display message)
+
+ Test full user flow: cart → checkout → confirmation
+
 ## Development server
 
 To start a local development server, run:
@@ -51,9 +85,3 @@ For end-to-end (e2e) testing, run:
 ```bash
 ng e2e
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
