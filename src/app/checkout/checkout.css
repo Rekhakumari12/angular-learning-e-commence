@@ -5,7 +5,7 @@
   max-width: 440px;
   margin: 2rem auto;
   color: var(--text-color, #e1e1e1);
-  box-shadow: var(--shadow, 0 2px 8px rgba(0,0,0,0.6));
+  box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.6));
 }
 
 h2 {
@@ -14,11 +14,11 @@ h2 {
   text-align: center;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 0.75rem;
   margin-top: 0.3rem;
-  margin-bottom: 1.1rem;
   border-radius: 7px;
   border: none;
   background: #181c20;
@@ -49,9 +49,16 @@ input, select {
 .error {
   color: #ef5350;
   font-size: 0.97rem;
-  background: #260009;
   border-radius: 5px;
   padding: 0.3rem 0.7rem;
   margin-top: 0.1rem;
   display: block;
+}
+
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.cardWrapper {
+  margin: 2rem 0 1rem 0;
 }

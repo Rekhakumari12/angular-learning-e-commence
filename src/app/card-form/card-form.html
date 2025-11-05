@@ -1,0 +1,34 @@
+<div [formGroup]="cardDetailsForm" class="cardWrapper">
+  <div class="wrapper">
+    <label>Card Number:</label>
+    <input formControlName="cardNumber" maxlength="16" placeholder="0000 1111 2222 3333" />
+    <div class="error" *ngIf="cardNumber?.touched && cardNumber?.invalid">
+      <span *ngIf="cardNumber?.errors?.['required']">Required</span>
+      <span *ngIf="cardNumber?.errors?.['pattern']">16 digits only</span>
+    </div>
+  </div>
+  <div class="wrapper">
+    <label>Name on Card:</label>
+    <input formControlName="cardName" placeholder="Cardholder Name" />
+    <div class="error" *ngIf="cardName?.touched && cardName?.invalid">
+      <span *ngIf="cardName?.errors?.['required']">Required</span>
+      <span *ngIf="cardName?.errors?.['pattern']">Alphabet only</span>
+    </div>
+  </div>
+  <div class="wrapper">
+    <label>Expiry (MM/YY):</label>
+    <input formControlName="expiry" maxlength="5" placeholder="MM/YY" />
+    <div *ngIf="expiry?.touched && expiry?.invalid" class="error">
+      <span *ngIf="expiry?.errors?.['maxlength']">Required</span>
+      <span *ngIf="expiry?.errors?.['pattern']">MM/YY format</span>
+    </div>
+  </div>
+  <div class="wrapper">
+    <label>CVV:</label>
+    <input formControlName="cvv" placeholder="123" type="password" maxlength="3" />
+    <div class="error" *ngIf="cvv?.touched && cvv?.invalid">
+      <span *ngIf="cvv?.errors?.['pattern']">3 digits only</span>
+      <span *ngIf="cvv?.errors?.['required']">Required</span>
+    </div>
+  </div>
+</div>

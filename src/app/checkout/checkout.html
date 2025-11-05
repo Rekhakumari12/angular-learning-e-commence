@@ -1,7 +1,7 @@
 <div class="checkout-container">
   <h2>Checkout</h2>
   <form (ngSubmit)="onSubmit()" [formGroup]="checkoutForm">
-    <div>
+    <div class="wrapper">
       <label>Name: </label>
       <input formControlName="name" placeholder="Your name" />
       <div *ngIf="checkoutForm.get('name')?.invalid && checkoutForm.get('name')?.touched">
@@ -12,15 +12,17 @@
       </div>
     </div>
 
-    <div>
+    <div class="wrapper">
       <label>Address:</label>
       <input formControlName="address" placeholder="Delivery address" />
-      <div *ngIf="checkoutForm.get('name')?.invalid && checkoutForm.get('name')?.touched">
-        <span *ngIf="checkoutForm.get('address')?.errors?.['required']" class="error">Required</span>
+      <div *ngIf="checkoutForm.get('address')?.invalid && checkoutForm.get('address')?.touched">
+        <span *ngIf="checkoutForm.get('address')?.errors?.['required']" class="error"
+          >Required</span
+        >
       </div>
     </div>
 
-    <div>
+    <div class="wrapper">
       <label>Email:</label>
       <input formControlName="email" placeholder="Email" />
       <div *ngIf="checkoutForm.get('email')?.invalid && checkoutForm.get('email')?.touched">
@@ -31,13 +33,18 @@
       </div>
     </div>
 
-    <div>
+    <div class="wrapper">
       <label>Payment Method:</label>
       <select formControlName="paymentMethod">
         <option value="">Select...</option>
         <option value="card">Credit Card</option>
         <option value="cod">Cash on delivery</option>
       </select>
+    </div>
+
+    <!-- card detaisl group shown only when card is selected -->
+    <div *ngIf="checkoutForm.get('paymentMethod')?.value === 'card'">
+      <app-card-form [cardDetailsForm]="checkoutForm.get('cardDetails')"></app-card-form>
     </div>
     <button type="button" [disabled]="checkoutForm.invalid" class="order-btn">Place order</button>
   </form>

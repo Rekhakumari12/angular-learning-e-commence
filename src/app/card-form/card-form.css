@@ -1,0 +1,28 @@
+.error {
+  color: #ef5350;
+  font-size: 0.97rem;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  margin-top: 0.1rem;
+  display: block;
+}
+
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.cardWrapper {
+  margin: 2rem 0 1rem 0;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.3rem;
+  border-radius: 7px;
+  border: none;
+  background: #181c20;
+  color: var(--text-color, #e1e1e1);
+  font-size: 1.1rem;
+}
