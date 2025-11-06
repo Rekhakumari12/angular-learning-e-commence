@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
 export class ProductService {
   // private means only class can change/access products directly
   private products: any = [
-    { name: 'Angular T-Shirt', price: 25, id: 0 },
-    { name: 'Laptop Stand', price: 45, id: 1 },
-    { name: 'Mechanic Keyboard', price: 120, id: 2 },
-    { name: 'Wireless Mouse', price: 30, id: 3 },
-    { name: 'USB-C Hub', price: 50, id: 4 },
+    { name: 'Angular T-Shirt', price: 25, id: 0, quantity: 1 },
+    { name: 'Laptop Stand', price: 45, id: 1, quantity: 1 },
+    { name: 'Mechanic Keyboard', price: 120, id: 2, quantity: 1 },
+    { name: 'Wireless Mouse', price: 30, id: 3, quantity: 1 },
+    { name: 'USB-C Hub', price: 50, id: 4, quantity: 1 },
   ];
 
   selectedProduct: any = null;
@@ -24,6 +24,7 @@ export class ProductService {
         ...newProduct,
         name,
         id: new Date().getTime(),
+        quantity: newProduct.quantity + 1,
       });
     }
   }

@@ -1,0 +1,73 @@
+.order-summary {
+  border-radius: 12px;
+  margin-block: 30px;
+  color: #fff;
+}
+
+.order-summary h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.3em;
+  color: #26c6da;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.order-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-summary li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #32343a;
+  background: #282c34;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.order-summary li:last-child {
+  border-bottom: none;
+}
+
+.order-summary span {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.order-summary input[type='number'] {
+  background: #222;
+  color: #26c6da;
+  border: 2px solid #26c6da;
+  border-radius: 6px;
+  padding: 4px 9px;
+  font-size: 1em;
+  font-weight: 500;
+  width: 55px;
+  margin-left: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.order-summary input[type='number']:focus {
+  border-color: #00bcd4;
+  background: #282c34;
+  color: #fff;
+}
+
+.order-summary p,
+.order-summary .total {
+  margin-top: 18px;
+  font-size: 1.08em;
+  font-weight: bold;
+  color: #26c6da;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #26c6da;
+  padding-top: 12px;
+}

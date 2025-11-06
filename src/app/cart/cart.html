@@ -1,12 +1,13 @@
 <div class="cart-container">
   <h2>Shopping Cart</h2>
-  <div *ngIf="cartItems.length; else emptyCart">
+  <div *ngIf="totalItemCount; else emptyCart">
     <div class="cart-item" *ngFor="let item of cartItems">
       <span>{{ item.name }} — ₹{{ item.price }}</span>
       <button (click)="removeFromCart(item.id)">Remove</button>
     </div>
     <button class="clear-btn" (click)="clearCart()">Clear All</button>
-    <button class="checkout-btn" routerLink="/checkout" [disabled]="cartItems.length === 0">
+    <app-order-summary [cartItems]="cartItems"></app-order-summary>
+    <button class="checkout-btn" routerLink="/checkout" [disabled]="totalItemCount === 0">
       Checkout
     </button>
   </div>

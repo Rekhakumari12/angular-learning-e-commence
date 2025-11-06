@@ -1,0 +1,19 @@
+<div class="order-summary">
+  <h3>Order Summary</h3>
+  <ul>
+    <li *ngFor="let item of cartItems; let idx = index">
+      <span>{{ item.name }}</span> —
+      <span>Qty: </span>
+      <input
+        type="number"
+        [value]="item.quantity"
+        min="1"
+        (change)="updateQuantity(idx, +$event.target.value)"
+      />
+      <span>Price: ₹{{ item.price * item.quantity }}</span>
+    </li>
+  </ul>
+  <p>
+    <strong>Total: ₹{{ totalPrice }}</strong>
+  </p>
+</div>

@@ -46,6 +46,7 @@
     <div *ngIf="checkoutForm.get('paymentMethod')?.value === 'card'">
       <app-card-form [cardDetailsForm]="checkoutForm.get('cardDetails')"></app-card-form>
     </div>
+
     <button type="button" [disabled]="checkoutForm.invalid" class="order-btn">Place order</button>
   </form>
 </div>

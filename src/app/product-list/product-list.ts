@@ -12,6 +12,7 @@ import { CartService } from '../services/cart.service';
 })
 export class ProductList implements OnInit {
   products: any[] = [];
+  addedProduct: any[] = [];
 
   constructor(private productService: ProductService, private cartService: CartService) {}
 
@@ -27,10 +28,15 @@ export class ProductList implements OnInit {
     return this.productService.selectedProduct;
   }
   get cartProductCount() {
-    return this.cartService.getItems().length;
+    return this.cartService.getTotalItemCount();
   }
 
   addToCart(product: any) {
+    this.addedProduct.push(product.id);
     this.cartService.addProduct(product);
+  }
+
+  isProductAdded(id:number){
+    return this.addedProduct.includes(id)
   }
 }

@@ -4,7 +4,12 @@
   <ul>
     <li *ngFor="let item of products" (click)="onProductSelected(item)">
       {{ item.name }} — ₹{{ item.price }}
-      <button class="add-to-cart-btn" (click)="addToCart(item)">Add to Cart</button>
+      <button class="add-to-cart-btn" (click)="addToCart(item)" *ngIf="!isProductAdded(item.id)">
+        Add to Cart
+      </button>
+      <button class="add-to-cart-btn" (click)="addToCart(item)" *ngIf="isProductAdded(item.id)">
+        Added to Cart
+      </button>
     </li>
   </ul>
   <div *ngIf="cartProductCount" class="cart-count">

@@ -112,6 +112,7 @@ div[ngIf] h3 {
   transform: scale(1.08);
 }
 
+
 .cart-count a[routerLink] {
   display: block;
   margin: 1.3rem auto 0 auto;
