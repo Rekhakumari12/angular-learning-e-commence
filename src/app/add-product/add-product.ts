@@ -12,11 +12,11 @@ import { ProductService } from '../services/product.service';
 })
 export class AddProduct {
   constructor(private router: Router, private productService: ProductService) {}
-  newProduct = { name: '', price: null };
+  newProduct = { name: '', price: null, quantity: 1 };
 
   onSubmit(form: any) {
     if (form.valid) {
-      this.productService.addProduct(this.newProduct)
+      this.productService.addProduct(this.newProduct);
       form.resetForm();
       this.router.navigate(['/']);
     }

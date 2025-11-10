@@ -1,0 +1,24 @@
+<div class="review-order-container">
+  <div class="review-order-title">Review Your Order</div>
+
+  <ul class="review-order-list">
+    <li *ngFor="let item of cartItems">
+      <span>{{ item.name }} - 1x{{ item.quantity }}</span>
+      <span>₹{{ item.price * item.quantity }}</span>
+    </li>
+  </ul>
+
+  <div class="review-order-amount">Total: ₹{{ totalPrice }}</div>
+
+  <div class="review-order-info" *ngIf="user">
+    <div>Name: {{ user?.name }}</div>
+    <div>Address: {{ user?.address }}</div>
+    <div>Email: {{ user?.email }}</div>
+    <div>Payment: {{ user?.paymentMethod }}</div>
+  </div>
+
+  <div class="review-order-actions">
+    <button class="review-order-btn" (click)="onPlaceOrder()">Confirm Order</button>
+    <!-- <button class="review-order-btn edit" (click)="onEdit()">Edit Deails</button> -->
+  </div>
+</div>

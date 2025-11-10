@@ -33,6 +33,15 @@
         type="number"
       />
     </div>
+    <div>
+      <input
+        name="quantity"
+        placeholder="Enter quantity"
+        [(ngModel)]="newProduct.quantity"
+        required
+        type="number"
+      />
+    </div>
     <button type="submit" [disabled]="f.invalid" class="add-btn">Add Product</button>
   </form>
   <a routerLink="/">Back to List</a>

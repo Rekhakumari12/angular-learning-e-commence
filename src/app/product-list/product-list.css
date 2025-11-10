@@ -112,6 +112,13 @@ div[ngIf] h3 {
   transform: scale(1.08);
 }
 
+.added-to-cart{
+  background: #00a721;
+}
+
+.added-to-cart:hover{
+  background: #00a721;
+}
 
 .cart-count a[routerLink] {
   display: block;

@@ -7,7 +7,11 @@
       <button class="add-to-cart-btn" (click)="addToCart(item)" *ngIf="!isProductAdded(item.id)">
         Add to Cart
       </button>
-      <button class="add-to-cart-btn" (click)="addToCart(item)" *ngIf="isProductAdded(item.id)">
+      <button
+        class="add-to-cart-btn added-to-cart"
+        (click)="addToCart(item)"
+        *ngIf="isProductAdded(item.id)"
+      >
         Added to Cart
       </button>
     </li>

@@ -47,6 +47,13 @@
       <app-card-form [cardDetailsForm]="checkoutForm.get('cardDetails')"></app-card-form>
     </div>
 
-    <button type="button" [disabled]="checkoutForm.invalid" class="order-btn">Place order</button>
+    <button
+      type="submit"
+      [disabled]="isPlaceOrderDisabled()"
+      class="order-btn"
+      routerLink="/review"
+    >
+      Place order
+    </button>
   </form>
 </div>

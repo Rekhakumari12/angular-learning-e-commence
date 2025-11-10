@@ -1,0 +1,99 @@
+.review-order-container {
+  background: #161616;
+  max-width: 520px;
+  margin: 32px auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.16);
+  padding: 40px 28px 32px;
+}
+
+.review-order-title {
+  color: #18c3e6;
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.review-order-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.review-order-list li {
+  background: #26292c;
+  border-radius: 8px;
+  border-bottom: 1.5px dotted #1a2f3d;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.review-order-amount {
+  font-size: 1.2rem;
+  color: #18c3e6;
+  font-weight: 700;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.review-order-info {
+  margin-bottom: 22px;
+  background: #222629;
+  border-radius: 8px;
+  color: #18c3e6;
+  font-size: 1rem;
+  padding: 14px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.review-order-info div {
+  margin-bottom: 7px;
+  color: #beeafe;
+  font-weight: 500;
+}
+
+.review-order-actions {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 12px;
+}
+
+.review-order-btn {
+  background: #18c3e6;
+  color: #161616;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.07rem;
+  padding: 13px 34px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(22,195,230,0.10);
+  transition: background 0.18s, color 0.18s;
+}
+
+.review-order-btn:hover {
+  background: #173966;
+  color: #18c3e6;
+}
+
+/* Optional style for edit button variant */
+.review-order-btn.edit {
+  background: #26292c;
+  color: #18c3e6;
+  border: 1.5px solid #18c3e6;
+}
+
+.review-order-btn.edit:hover {
+  background: #18c3e6;
+  color: #26292c;
+}

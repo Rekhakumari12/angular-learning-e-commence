@@ -24,7 +24,7 @@ export class ProductService {
         ...newProduct,
         name,
         id: new Date().getTime(),
-        quantity: newProduct.quantity + 1,
+        quantity: newProduct.quantity,
       });
     }
   }

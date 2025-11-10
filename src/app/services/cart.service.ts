@@ -11,9 +11,10 @@ export class CartService {
     return this.cartItem.reduce((sum, item) => sum + item.quantity, 0);
   }
   addProduct(product: any) {
+    console.log(product, '==');
     const productId = this.cartItem.findIndex((item) => item.id === product.id);
     if (productId === -1) {
-      this.cartItem.push(product);
+      this.cartItem.push({ ...product, quantity: 1 });
     } else {
       this.cartItem[productId].quantity = this.cartItem[productId].quantity + 1;
     }
